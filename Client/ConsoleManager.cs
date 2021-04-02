@@ -10,7 +10,14 @@ namespace IS421Midterm.Client
         public ConsoleManager() { }
       
         public EventHandler<Calculation> CalculationPublished;
-       
+        public EventHandler<Calculator> CalculatorSubscriber;
+
+        // define delegate
+       // public delegate void ConsoleManagerEventHandler(object source, EventArgs args);
+        // definie event
+        //public event ConsoleManagerEventHandler ConsoleManged;
+
+
 
         public Calculation GetUserInput()
         {
@@ -30,9 +37,11 @@ namespace IS421Midterm.Client
             double y = Convert.ToDouble(Console.ReadLine());
 
             var calculation = calculator.Create(x, y, option);
-            
+
             return calculation;
         }
+
+     
 
         private void startover() {
 
@@ -57,9 +66,20 @@ namespace IS421Midterm.Client
             startover();
         }
 
-        protected virtual void OnPublishCalculation(Calculation calculation)
-        {
-            CalculationPublished?.Invoke(this,  calculation);
-        }
+        // protected virtual void OnPublishCalculation(Calculation calculation)
+        // {
+        // CalculationPublished?.Invoke(this,  calculation);
+        // }
+
+
+
+
+       // protected virtual void OnConsoleManager() {
+          //  ConsoleManged?.Invoke(this, EventArgs.Empty);
+       // }
+
+       
+
+
     }
 }
