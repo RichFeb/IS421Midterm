@@ -30,8 +30,22 @@ namespace IS421Midterm.Client
             double y = Convert.ToDouble(Console.ReadLine());
 
             var calculation = calculator.Create(x, y, option);
-
+            
             return calculation;
+        }
+
+        private void startover() {
+
+            Console.WriteLine("If you want to do another Calculation press Y. If not Press anyKey");
+            char YesorNo = (char)Console.Read();
+            bool mybool = (YesorNo == 'y' ||  YesorNo== 'Y');
+
+            while (mybool) {
+
+                GetUserInput();
+
+            }
+
         }
 
         public void PublishCalculation(Calculation calculation)
@@ -40,6 +54,7 @@ namespace IS421Midterm.Client
                 calculation.First,
                 calculation.Operation,
                 calculation.Second);
+            startover();
         }
 
         protected virtual void OnPublishCalculation(Calculation calculation)
