@@ -1,7 +1,6 @@
 ﻿using CalculatorLib.Models;
 using IS421Midterm.CalculatorLib.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 using System;
 using System.Collections.Generic;
 
