@@ -1,14 +1,15 @@
-﻿using IS421Midterm.CalculatorLib.Models;
+﻿using IS421Midterm.CalculatorLib.Interfaces;
+using IS421Midterm.CalculatorLib.Models;
 
 namespace CalculatorLib.Interfaces
 {
     interface IHistoryIterator
     {
-        Calculation First();
-        Calculation Next();
+        ICalculation First();
+        ICalculation Next();
 
-        Calculation Prev();
-        Calculation Last();
+        ICalculation Prev();
+        ICalculation Last();
         
     }
 }
