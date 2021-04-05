@@ -20,9 +20,9 @@ namespace CalculatorLib.Models
             get { return CalculationList.Count(); }
         }
 
-        public void AddCalculation(Calculation calc)
+        public void AddCalculation(ICalculation calc)
         {
-            CalculationList.Add(calc);
+            CalculationList.Add((Calculation)calc);
         }
 
         public Calculation GetCalculation(int index)
@@ -32,21 +32,7 @@ namespace CalculatorLib.Models
 
         public void EditCalculation(int index)
         {
-            Console.WriteLine("Editing: {0) {1} {2} ", 
-                CalculationList[index].First, 
-                CalculationList[index].Operation,
-                CalculationList[index].Second);
-
-            Console.WriteLine("Enter the first number");
-            double _first = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Enter the operation");
-            string _op = Console.ReadLine();
-            Console.WriteLine("Enter another number");
-            double _second = Convert.ToDouble(Console.ReadLine());
-
-            CalculationList[index].First = _first;
-            CalculationList[index].Operation = _op;
-            CalculationList[index].Second = _second;
+            
         }
     }
 }
