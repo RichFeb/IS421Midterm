@@ -1,9 +1,8 @@
-﻿using IS421Midterm.Client.ConsoleManager.Events;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace IS421Midterm.Client.ConsoleManager.Events
+namespace IS421Midterm.Client.Events
 {
     public class ConsoleEventAggregator
     {

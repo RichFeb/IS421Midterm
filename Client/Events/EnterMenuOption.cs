@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace IS421Midterm.Client.ConsoleManager.Events
+namespace IS421Midterm.Client.Events
 {
     public class EnterMenuOption
     {

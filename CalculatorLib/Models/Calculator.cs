@@ -1,13 +1,12 @@
-﻿using IS421Midterm.CalculatorLib.Interfaces;
-using IS421Midterm.CalculatorLib.Models;
+﻿using CalculatorLib.Models;
+using IS421Midterm.CalculatorLib.Interfaces;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace IS421Midterm.CalculatorLib.Models
 {
     public sealed class Calculator : ICalculator
     {
+
         private static readonly Calculator instance = new Calculator();
 
         static Calculator() { }

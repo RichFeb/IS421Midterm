@@ -1,5 +1,6 @@
 ﻿using System;
 using IS421Midterm.Client;
+using IS421Midterm.Client.Events;
 
 namespace IS421Midterm
 {
@@ -7,28 +8,13 @@ namespace IS421Midterm
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            ConsoleEventAggregator eventAggregator = new ConsoleEventAggregator();
+            
 
-            /*
-             * 
-             * Next Steps
-             * 
-             * Test that event gets published to calculator
-             * 
-             * Process calculation
-             * 
-             * Add to history
-             * 
-             * Test history collection & iterate through it
-             * 
-             * Finish writing tests
-             * 
-            */
 
-            var conman = new ConsoleManager();
-            conman.CalculationPublished += conman.CalculationPublished;
-            var calculation = conman.GetUserInput();
-            conman.PublishCalculation(calculation);
+
+
+          
         }
     }
 }

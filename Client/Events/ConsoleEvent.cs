@@ -1,6 +1,7 @@
-﻿using System;
+﻿using IS421Midterm.Client.Events;
+using System;
 
-namespace IS421Midterm.Client.ConsoleManager.Events
+namespace IS421Midterm.Client.Events
 {
     public class ConsoleEvent
     {
