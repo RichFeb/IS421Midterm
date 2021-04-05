@@ -7,9 +7,12 @@ using System.Linq;
 
 namespace CalculatorLib.Models
 {
-    public class HistoryCollection : IHistoryCollection
+    public class HistoryCollection : IHistoryCollectionState
     {
         private List<Calculation> CalculationList = new List<Calculation>();
+
+        public HistoryCollection History { get;set;  }
+
         public HistoryIterator CreateIterator()
         {
             return new HistoryIterator(this);
@@ -34,5 +37,7 @@ namespace CalculatorLib.Models
         {
             
         }
+
+       
     }
 }
