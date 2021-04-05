@@ -6,6 +6,9 @@ namespace IS421Midterm.Client
 {
     public class ConsoleManager
     {
-
+        public void Run()
+        {
+            
+        }
     }
 }
