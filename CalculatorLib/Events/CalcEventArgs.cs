@@ -10,3 +10,6 @@ namespace IS421Midterm.CalculatorLib.Events
         public Calculation Calc { get; set; }
     }
 }
+
+
+

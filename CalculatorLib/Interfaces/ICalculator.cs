@@ -12,6 +12,8 @@ namespace IS421Midterm.CalculatorLib.Interfaces
 
         public void Subscribe(ConsoleManager consoleManager){}
 
+        public void Unsubscribe(ConsoleManager consoleManager) { }
+
         public void ShowResult(Calculation calculation);
     }
 }

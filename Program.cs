@@ -11,26 +11,17 @@ namespace IS421Midterm
 
             /*
              * 
-             * Steps
+             * Next Steps
              * 
-             * 1. Get User Input
-             * 2. Process Input
-             * 3. Create Calculation
-             * 4. Add calculation to history
+             * Test that event gets published to calculator
              * 
-             * + => Operation
+             * Process calculation
              * 
-             * Console => Publisher
-             * Calculator => Subscriber
+             * Add to history
              * 
-             * Events
+             * Test history collection & iterate through it
              * 
-             * InputReceived
-             * CalculationCreated
-             * 
-             * 
-             * Enter your operands 9 8 7
-             * 
+             * Finish writing tests
              * 
             */
 

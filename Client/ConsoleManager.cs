@@ -21,6 +21,8 @@ namespace IS421Midterm.Client
             Console.WriteLine("\t- - Subtract");
             Console.WriteLine("\t* - Multiply");
             Console.WriteLine("\t/ - Divide");
+            Console.WriteLine("\t** - Square");
+            Console.WriteLine("\tsqrt - Square Root");
             Console.WriteLine("\th - History");
             Console.Write("Your option? ");
             string option = (Console.ReadLine());

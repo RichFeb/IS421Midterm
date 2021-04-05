@@ -1,5 +1,6 @@
 ﻿using CalculatorLib.Interfaces;
 using CalculatorLib.Models;
+using System.Collections.Generic;
 
 namespace IS421Midterm.CalculatorLib.Models
 {
@@ -57,5 +58,10 @@ namespace IS421Midterm.CalculatorLib.Models
             }
         }
 
+
+        public List<Calculation> PrintAll() 
+        {
+            return null;
+        }
     }
 }
