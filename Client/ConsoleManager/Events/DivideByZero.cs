@@ -6,7 +6,7 @@ namespace IS421Midterm.Client.ConsoleManager.Events
 {
     public class DivideByZero
     {
-        public void OnLogMessage(object sender, EventArgs e)
+        public void OnLog(object sender, EventArgs e)
         {
             Console.WriteLine("LOG: {0} Divide by error detected.", new DateTime());
             Console.WriteLine("LOG: {0} Enter a new calculation.", new DateTime());
