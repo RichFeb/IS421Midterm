@@ -8,12 +8,9 @@ namespace IS421Midterm.CalculatorLib.Interfaces
 {
     interface ICalculator
     {
-        public Calculation Create(double a, double b, string op);
+        public Calculation Create(double a, Func<double, double> op);
 
-        public void Subscribe(ConsoleManager consoleManager){}
+        public Calculation Create(double a, double b, Func<double, double, double> op);
 
-        public void Unsubscribe(ConsoleManager consoleManager) { }
-
-        public void ShowResult(Calculation calculation);
     }
 }
