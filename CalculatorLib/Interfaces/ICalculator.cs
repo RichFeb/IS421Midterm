@@ -6,7 +6,7 @@ using System.Text;
 
 namespace IS421Midterm.CalculatorLib.Interfaces
 {
-    interface ICalculator
+    public interface ICalculator
     {
         public Calculation Create(double a, Func<double, double> op);
 

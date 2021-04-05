@@ -2,7 +2,7 @@
 
 namespace IS421Midterm.CalculatorLib.Interfaces
 {
-    interface IHistoryCollectionState
+    interface IHistoryCollection
     {
         HistoryIterator CreateIterator();
         public void AddCalculation(ICalculation calc);

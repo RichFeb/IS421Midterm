@@ -9,5 +9,9 @@ namespace IS421Midterm.CalculatorLib.Interfaces
         public double GetBinaryResult();
 
         public double GetUnaryResult();
+        public interface ICalculation
+        {
+            public double GetResult();
+        }
     }
 }

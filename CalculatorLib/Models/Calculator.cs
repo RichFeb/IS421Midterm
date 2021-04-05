@@ -9,9 +9,22 @@ namespace IS421Midterm.CalculatorLib.Models
 
         private static readonly Calculator instance = new Calculator();
 
-        static Calculator() { }
+        private ICalculator _calculator;
 
-        private Calculator() { }
+         public Calculator()
+        {
+          
+
+        }
+        public Calculator(ICalculator calculator)
+        {
+            this._calculator = calculator;
+
+            //_calcEvent.UseCalculator(_calculatorBuilder);
+
+        }
+
+        
 
         public static Calculator Instance { get { return instance; }}
 

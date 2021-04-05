@@ -35,5 +35,12 @@ namespace IS421Midterm.CalculatorLib.Models
         {
             return UnaryOperation(First);
         }
+
+
+        public double GetResult()
+        {
+            return BinaryOperation(First, Second);
+
+        }
     }
 }
