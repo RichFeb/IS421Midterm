@@ -6,21 +6,26 @@ using System.Text;
 
 namespace IS421Midterm.CalculatorLib.Models
 {
-    public class Calculator : ICalculator
+    public sealed class Calculator : ICalculator
     {
-        public Calculator()
-        {
-        }
+        private static readonly Calculator instance = new Calculator();
 
-        public Calculation Create(double a, double b, string op)
+        static Calculator() { }
+
+        private Calculator() { }
+
+        public static Calculator Instance { get { return instance; }}
+
+        public Calculation Create(double a, double b, Func<double, double, double> op)
         {
             return new Calculation(a, b, op);
         }
 
-     
-        public void ShowResult(Calculation calculation)
+        public Calculation Create(double a, Func<double, double> op)
         {
-            Console.WriteLine(calculation.Result);
+            return new Calculation(a, op);
         }
+
+        
     }
 }
