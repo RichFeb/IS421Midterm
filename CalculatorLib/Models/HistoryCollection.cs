@@ -40,12 +40,15 @@ namespace CalculatorLib.Models
             Console.WriteLine("Enter the first number");
             double _first = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Enter the operation");
-            string _op = Console.ReadLine();
+
+            // the type is wrong here
+
+           string _op = Console.ReadLine();
             Console.WriteLine("Enter another number");
             double _second = Convert.ToDouble(Console.ReadLine());
 
             CalculationList[index].First = _first;
-            CalculationList[index].Operation = _op;
+            //CalculationList[index].Operation = _op;
             CalculationList[index].Second = _second;
         }
     }

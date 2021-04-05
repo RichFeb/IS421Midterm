@@ -9,6 +9,7 @@ namespace IS421Midterm.CalculatorLib.Interfaces
     interface ICalculator
     {
         public Calculation Create(double a, double b, string op);
+        public Calculation Create(List<double> listValues, Func<List<double>, double> operation);
 
         public void Subscribe(ConsoleManager consoleManager){}
 

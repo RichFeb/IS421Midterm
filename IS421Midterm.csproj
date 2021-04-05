@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <Folder Include="Tests\" />
+    <Folder Include="CalculatorLib\Factories\" />
   </ItemGroup>
 
 </Project>

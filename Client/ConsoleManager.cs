@@ -1,7 +1,7 @@
-﻿using IS421Midterm.CalculatorLib.Models;
+﻿using IS421Midterm.CalculatorLib;
+using IS421Midterm.CalculatorLib.Models;
 using System;
-using System.Collections.Generic;
-using System.Text;
+
 
 namespace IS421Midterm.Client
 {
@@ -11,6 +11,17 @@ namespace IS421Midterm.Client
       
         public EventHandler<Calculation> CalculationPublished;
         public EventHandler<Calculator> CalculatorSubscriber;
+
+
+        public static Calculator _calculator = new Calculator();
+
+        
+
+        ConsoleManager _consoleManager = new ConsoleManager();
+
+        
+
+        RegisterEvents _consoleEventManager = new RegisterEvents(_calculator);
 
         // define delegate
        // public delegate void ConsoleManagerEventHandler(object source, EventArgs args);
@@ -30,13 +41,21 @@ namespace IS421Midterm.Client
             Console.WriteLine("\t/ - Divide");
             Console.WriteLine("\th - History");
             Console.Write("Your option? ");
+
             string option = (Console.ReadLine());
             Console.WriteLine("Enter a number");
+
+
             double x = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Enter a number");
+
+
             double y = Convert.ToDouble(Console.ReadLine());
 
+            // preforming the calculation here
+
             var calculation = calculator.Create(x, y, option);
+
 
             return calculation;
         }
@@ -65,6 +84,24 @@ namespace IS421Midterm.Client
                 calculation.Second);
             startover();
         }
+
+
+        //I m not sure down here what I should do 
+
+
+       // void InitializeCalculationEvent()
+
+       // {
+
+          //  _consoleManager.Attach()
+       // }
+
+
+
+
+
+
+        // these are my old attempt 
 
         // protected virtual void OnPublishCalculation(Calculation calculation)
         // {

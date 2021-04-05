@@ -5,8 +5,14 @@ using System.Text;
 
 namespace IS421Midterm.CalculatorLib.Events
 {
-    public class CalcEventArgs
+    public class CalcEventArgs : EventArgs
     {
         public Calculation Calc { get; set; }
+    }
+
+    public class CalculatorEventArgs : EventArgs {
+
+        public Calculator Caculator { get; set; }
+
     }
 }
