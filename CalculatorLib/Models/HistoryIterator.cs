@@ -1,5 +1,6 @@
 ﻿using CalculatorLib.Interfaces;
 using CalculatorLib.Models;
+using IS421Midterm.CalculatorLib.Interfaces;
 using System.Collections.Generic;
 
 namespace IS421Midterm.CalculatorLib.Models
@@ -21,20 +22,20 @@ namespace IS421Midterm.CalculatorLib.Models
         {
             History = history;
         }
-        public Calculation First()
+        public ICalculation First()
         {
             Current = 0;
             return History.GetCalculation(Current);
         }
 
-        public Calculation Last()
+        public ICalculation Last()
         {
             Current = History.Count - 1;
             return History.GetCalculation(Current);
             
         }
 
-        public Calculation Next()
+        public ICalculation Next()
         {
             Current += 1;
             if (!IsCompleted)
@@ -46,7 +47,7 @@ namespace IS421Midterm.CalculatorLib.Models
             }
         }
 
-        public Calculation Prev()
+        public ICalculation Prev()
         {
             Current -= 1;
             if (!IsCompleted)
@@ -59,7 +60,7 @@ namespace IS421Midterm.CalculatorLib.Models
         }
 
 
-        public List<Calculation> PrintAll() 
+        public List<ICalculation> PrintAll() 
         {
             return null;
         }
