@@ -6,16 +6,14 @@ namespace CalculatorLib.Models
 {
     public class Operations
     {
-        public  static double Add(double a, double b) => a + b;
-
-        public static double Subtract(double a, double b) => a - b;
-
-        public static double Multiply(double a, double b) => a * b;
-
-        public static double Divide(double a, double b) => (b != 0) ? a / b : throw new DivideByZeroException();
-
-        public static double Square(double a) => a * a;
-
-        public static double SquareRoot(double a) => Math.Sqrt(a);
+        public static Func<double, double, double> Sum = (a, b) => a + b;
+        public static Func<double, double, double> Subtract = (a, b) => a - b;
+        public static Func<double, double, double> Multiply = (a, b) => a * b;
+        public static Func<double, double, double> Divide = (a, b) => a / b;
+        public static Func<double, double, double> Exp = (a, b) => Math.Pow(a, b);
+        public static Func<double, double, double> BinaryUnassigned = (a, b) => 0;
+        public static Func<double, double> Square = (a) => a * a;
+        public static Func<double, double> SquareRoot = (a) => Math.Pow(a, 0.5);
+        public static Func<double, double> UnaryUnassigned = (a) => 0;
     }
 }
