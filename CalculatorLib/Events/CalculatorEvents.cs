@@ -21,7 +21,12 @@ namespace IS421Midterm.CalculatorLib.Events
             Console.WriteLine("The calculation you have queued is: {0}", calculation.GetUnaryResult());
         }
 
-        protected virtual void OnCalculation(ICalculation calculation)
+        protected virtual void OnBinaryCalculation(ICalculation calculation)
+        {
+            CalculationComplete?.Invoke(this, new CalcEventArgs() { Calculation = calculation });
+        }
+
+        protected virtual void OnUnaryCalculation(ICalculation calculation)
         {
             CalculationComplete?.Invoke(this, new CalcEventArgs() { Calculation = calculation });
         }
