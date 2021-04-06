@@ -6,6 +6,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Console;
 using IS421Midterm.CalculatorLib;
+using IS421Midterm.Client.Events;
+
 namespace IS421Midterm
 {
     class Program
@@ -21,27 +23,31 @@ namespace IS421Midterm
 
             var calculatorService = serviceCollection.BuildServiceProvider();
 
-            // are we using ConosoleManager ?? bc we dont have start in it ??
+
+            var _consoleInit = _serviceProvider.GetService<ProgramInit>();
+            var _consoleNumber = _serviceProvider.GetService<EnterMenuOption>();
+            
+
+            var _consoleOption = _serviceProvider.GetService<EnterOperation>();
+            var _consoleMenuOption = _serviceProvideer.GetService<EnterMenuOption>();
 
             var _consoleEManager = _serviceProvider.GetService<ConsoleManager>();
-
-        
 
             //conman.Run();
             // we dont have start method for this one
 
 
-            Console.Start();
+            ConsoleManager.Run();
 
         }
 
-       
+   
 
 
         private static void ConfigureServices(IServiceCollection services)
         {
             services.AddLogging(configure => configure.AddConsole())
-                .AddTransient<ConsoleManager>();
+                .AddTransient<ConsoleEvent>();
         }
     }
 
