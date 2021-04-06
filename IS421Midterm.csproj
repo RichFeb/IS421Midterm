@@ -11,4 +11,7 @@
     <PackageReference Include="MSTest.TestFramework" Version="2.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="CalculatorLib\img\" />
+  </ItemGroup>
 </Project>

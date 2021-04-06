@@ -8,8 +8,9 @@ namespace IS421Midterm.CalculatorLib.Models
     {
 
         private static readonly Calculator instance = new Calculator();
+        private ICalculator _calculator;
 
-         public Calculator()
+        public Calculator()
         {
           
 
