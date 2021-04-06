@@ -11,5 +11,6 @@ namespace IS421Midterm.Client.Interfaces
         void Detach(IConsoleObserver observer);
 
         void Notify();
+        void Attach(object observer);
     }
 }

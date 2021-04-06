@@ -6,7 +6,7 @@ namespace IS421Midterm.Client.Events
 {
     public class EnterOperation
     {
-        public void OnLog(object sender, EventArgs e)
+        public String  OnLog(object sender, EventArgs e)
         {
             Console.WriteLine("Choose an option from the following list:");
             Console.WriteLine("\t+ - Add");
@@ -15,7 +15,11 @@ namespace IS421Midterm.Client.Events
             Console.WriteLine("\t/ - Divide");
             Console.WriteLine("\t** - Exp");
             Console.WriteLine("\tsqrt - Square Root");
-     
+            String Operation = Console.ReadLine();
+
+            return Operation;
         }
+
+        
     }
 }
