@@ -8,15 +8,7 @@ In this calculator, the user can choose which operation to use from the console.
 
 2.  Your calculation must be stored in a model.  Each calculation needs to be stored in a list of calculations that you can iterate over to display the next, previous, first, and last calculation in the list of calculations.  I.e. the console app should present the user an option to view the list of calculations from the history and the user should be able to select next, previous, first, and last to navigate the list and select a calculation to change.  
 
-3.  You need to handle a divide by zero condition, which throws an exception and writes a log entry that the error occurred and the program needs to skip that record.  Follow this tutorial on how to setup a logging library using dependency injection: https://www.blinkingcaret.com/2018/02/14/net-core-console-logging/ (Links to an external site.)
-
-## Additional Requirements:
-
-1.  You need to demonstrate at least 5 design patterns and you should plan how you will use these patterns before coding.
-
-2.  You need to create a tutorial article that explains how you applied SOLID and Object Oriented Design Patterns to create the calculator.
-
-3.  Use dependency injection somewhere in the program and illustrate how to use the inversion of control principle 
+3.  Divide by zero condition, which throws an exception and writes a log entry that the error occurred and the program needs to skip that record.  Follow this tutorial on how to setup a logging library using dependency injection: https://www.blinkingcaret.com/2018/02/14/net-core-console-logging/ (Links to an external site.)
 
 ## Implementation
 
