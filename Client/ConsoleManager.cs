@@ -26,29 +26,99 @@ namespace IS421Midterm.Client
         {
             bool UserInput = true;
 
-            while (UserInput) {
-
+            
+                startUp();
+                start();
                 
+                var NumInput1= UserInputNumbers();
+                var NumInput2 = UserInputNumbers(); 
+                var operation = start();
 
+                var calculation = calculator.Create(NumInput1, NumInput2, operation);
 
-                Func<double, double, double> operation = enterOperation.OnLog();
-                var num = enterNumericInput.OnLog();
-                var num2 = enterNumericInput.OnLog();
+            Console.WriteLine("If you want to continue press Y. If not Press anyKey");
+            char YesorNo = (char)Console.Read();
+            bool mybool = (YesorNo == 'y' || YesorNo == 'Y');
 
-                DoCalculation(num, num2, operation);
+            while (mybool)
+            {
 
-                var menuOption = enterMenuOption.OnLog();
-                
+            int caseSwitch = Int32.Parse(Option());
+
+                switch (caseSwitch)
+                {
+                    case 1:
+
+                        Console.WriteLine("Calculating ");
+                        start();
+                        Option();
+                    case 2:
+
+                        Console.WriteLine("Showing History ");
+                        Option();
+
+                    default:
+                        Console.WriteLine("Exitin ......");
+
+                }
 
             }
         }
 
+        public int UserInputNumbers() {
 
-        public void DoCalculation(double num, double num2, Func<double, double, double> menuoption) {
+
+            Console.WriteLine("Enter enter a number.");
+
+            var NumInput1 = Console.Read();
 
 
-            var CalcResult = calculator.Create(num, num2, menuoption);
 
+            return NumInput1;
+        }
+
+        public void startUp() {
+
+            Console.WriteLine("Calculator program startup commencing. Please enter an option.");
+
+        }
+        public string start() {
+
+
+            Console.WriteLine("Choose an option from the following list:");
+            Console.WriteLine("\t+ - Add");
+            Console.WriteLine("\t- - Subtract");
+            Console.WriteLine("\t* - Multiply");
+            Console.WriteLine("\t/ - Divide");
+            Console.WriteLine("\t** - Exp");
+            Console.WriteLine("\tsqrt - Square Root");
+
+            var operation = Console.ReadLine();
+
+            return operation;
+        }
+
+
+        public string Option() {
+
+
+            Console.WriteLine("Please enter 1 of 3 options, listed below:");
+            Console.WriteLine("\t0 - Begin/Continue Calculating");
+            Console.WriteLine("\t1 - View History");
+            Console.WriteLine("\t2 - Exit");
+            var option = Console.ReadLine();
+
+
+            return option;
+        }
+
+        public void PublishCalculation(Calculation calculation)
+        {
+            Console.WriteLine("{0} {1} {2}",
+                calculation.First,
+                calculation.Operation,
+                calculation.Second);
+            start();
         }
 
 
