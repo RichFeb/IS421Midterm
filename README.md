@@ -5,6 +5,7 @@
 For this project, you need to create a calculator and an article explaining how you used design patterns with code examples from the calculator.  The calculator should run from the console by accepting user input and it should have unit tests to verify that your patterns work.  Your program needs to run as a console application where you can choose the operation and then be prompted to input the required information, which will then be calculated.  Your program should also be able to output the history of calculations and you should be able to select which calculation in the history you would like to modify.  This means that your calculation model should be able to be retrieved, edited, and saved.
 
 ## Calculator Requirements:
+In this calculator, the user can choose which operation to use from the console. Basica operations: Addition, Subtraction, Division, Multiplication, Square Root, Square. 
 
 1.  Basic Operations: Addition, Subtraction, Division, Multiplication, Square Root, Square.  The user should be able to select what functions are available from the console when the program starts.  The calculator needs to be configurable, so that you can specify what functions the calculator is capable of and dynamically add functionality to it at run-time based on the user's selection.  The selection of capabilities should be the first thing the calculator does when it starts up.   The user should be able to select an option that will display what the calculator is capable of doing.
 
@@ -30,10 +31,14 @@ Each class has a distinct set of use cases and no more than is needed, fulfillin
 
 ### Design Patterns 
 
-1. Builder
-2. Singleton
-3. Observer/Subject
-4. State
-5. Iterator
+1. Builder Design Patterns 
+2. Singleton Design Patterns
+
+3. Observer/Subject Design Patterns
+![Test Image 1](Observer.png)
+4. State Design Patterns
+
+5. Iterator Design Patterns
+![Test Image 1](Iterator.png)
 
  

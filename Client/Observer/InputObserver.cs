@@ -9,7 +9,7 @@ namespace IS421Midterm.Client.Observer
     {
         public void Update(ConsoleManager subject)
         {
-            var input = subject.
+            var input = subject;
         }
     }
 }
