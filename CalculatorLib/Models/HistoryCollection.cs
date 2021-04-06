@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace CalculatorLib.Models
 {
-    public class HistoryCollection : IHistoryCollectionState
+    public class HistoryCollection : IHistoryCollection
     {
         private List<Calculation> CalculationList = new List<Calculation>();
 
