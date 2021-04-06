@@ -9,7 +9,8 @@ namespace IS421Midterm.Client.Observer
     {
         public void Update(ConsoleManager subject)
         {
-            var input = subject.
+            var input = subject.GetLastInput();
+            Console.WriteLine("Last recorded input was: {0}", input);
         }
     }
 }
