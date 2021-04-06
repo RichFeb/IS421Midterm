@@ -9,8 +9,6 @@ namespace IS421Midterm.CalculatorLib.Models
 
         private static readonly Calculator instance = new Calculator();
 
-        private ICalculator _calculator;
-
          public Calculator()
         {
           
@@ -19,8 +17,6 @@ namespace IS421Midterm.CalculatorLib.Models
         public Calculator(ICalculator calculator)
         {
             this._calculator = calculator;
-
-            //_calcEvent.UseCalculator(_calculatorBuilder);
 
         }
 

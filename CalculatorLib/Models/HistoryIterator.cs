@@ -11,8 +11,6 @@ namespace IS421Midterm.CalculatorLib.Models
 
         private int Current = -1;
 
-        private bool IsEmpty => History.Count == 0; 
-
         public bool IsCompleted
         {
             get { return Current >= History.Count;  }

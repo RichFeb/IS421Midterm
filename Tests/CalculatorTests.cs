@@ -2,10 +2,6 @@
 using IS421Midterm.CalculatorLib.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using System.Collections.Generic;
-
-
-
 
 namespace IS421Midterm.Tests
 {
@@ -32,18 +28,11 @@ namespace IS421Midterm.Tests
             Func<double, double, double> _action = Operations.Sum;
             Calculator _calculator = new Calculator(new Calculator());
 
-            //var _calculatorBuilder = new CalculatorBuilder();
-
-            //var _result = _calculatorBuilder.CreateCalculation(_a, _b, _action);
+           
             var _result = _calculator.Create(_a, _b, _action);
 
             Console.WriteLine(_result.GetResult());
             Assert.AreEqual(_result.GetResult(), 3);
-
-            //Console.WriteLine(_calculatorBuilder.GetList()[0].GetResult());
-            //var _result = _calculator.CreateCalculation(_a, _b, _action);
-
-
 
         }
 
@@ -87,63 +76,7 @@ namespace IS421Midterm.Tests
 
         }
 
-        /*
-        [TestMethod()]
-        public void CalculationListTest()
-        {
-
-
-
-
-            double _a = 4;
-            double _b = 2;
-            Func<double, double, double> _action = Operations.Sum;
-            var _calculatorBuilder = new CalculatorBuilder();
-            Calculator _calculator = new Calculator(_calculatorBuilder);
-
-
-
-            _calculator.CreateCalculation(_a, _b, _action);
-
-            _action = Operations.Difference;
-            _calculator.CreateCalculation(_a, _b, _action);
-
-            _action = Operations.Division;
-            _calculator.CreateCalculation(_a, _b, _action);
-
-
-            _action = Operations.Multiplication;
-            _calculator.CreateCalculation(_a, _b, _action);
-
-
-
-
-
-            _calculatorBuilder.GetList().ForEach(action: delegate (ICalculation calculations)
-            {
-                Console.WriteLine(calculations.GetResult());
-
-            });
-
-        }
-        [TestMethod()]
-        public void SumListTest()
-        {
-            //initialize a new list of numbers
-            List<double> _values = new List<double> { 1, 2, 3, 4, 5, 6 };
-
-            Func<List<double>, double> _operations = OperationList.SumList;
-
-            Calculator _calculator = new Calculator(new CalculatorBuilder()); //Not setting new CalculatorBuilder() will throw a System.NullReferenceException where the object has not been set to an instance of an object
-            var _result = _calculator.CreateCalculation(_values, _operations);
-            Assert.AreEqual(21, _result.GetResult());
-
-
-
-
-        }
-        */
-       
+        
 
     }
 }

@@ -7,22 +7,13 @@ namespace IS421Midterm.Client.Events
 {
     public class ConsoleEventAggregator
     {
-        Calculator calculator;
+        
         public ConsoleEvent consoleEvent = new ConsoleEvent();
         ProgramInit programInit = new ProgramInit();
         EnterOperation enterOperation = new EnterOperation();
         EnterNumericInput enterNumericInput = new EnterNumericInput();
         EnterMenuOption enterMenuOption = new EnterMenuOption();
         DivideByZero divideByZero = new DivideByZero();
-
-        public ConsoleEventAggregator(Calculator calculator) {
-
-            this.calculator = calculator;
-        }
-
-        public ConsoleEventAggregator()
-        {
-        }
 
         public void RegisterProgramInit()
         {
