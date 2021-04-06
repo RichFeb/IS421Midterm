@@ -15,7 +15,9 @@ namespace IS421Midterm.Client.Events
             Console.WriteLine("\t/ - Divide");
             Console.WriteLine("\t** - Exp");
             Console.WriteLine("\tsqrt - Square Root");
-     
+            
         }
+
+        
     }
 }

@@ -17,6 +17,8 @@ namespace IS421Midterm
 
             Calculator _calculator = Calculator.Instance;
 
+            var conman = new ConsoleManager();
+
             var serviceCollection = new ServiceCollection();
 
             ConfigureServices(serviceCollection);
@@ -24,20 +26,12 @@ namespace IS421Midterm
             var calculatorService = serviceCollection.BuildServiceProvider();
 
 
-            var _consoleInit = _serviceProvider.GetService<ProgramInit>();
-            var _consoleNumber = _serviceProvider.GetService<EnterMenuOption>();
-            
+          
 
-            var _consoleOption = _serviceProvider.GetService<EnterOperation>();
-            var _consoleMenuOption = _serviceProvideer.GetService<EnterMenuOption>();
-
-            var _consoleEManager = _serviceProvider.GetService<ConsoleManager>();
-
-            //conman.Run();
-            // we dont have start method for this one
+            conman = calculatorService.GetService<ConsoleManager>();
 
 
-            ConsoleManager.Run();
+            conman.Run();
 
         }
 

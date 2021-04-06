@@ -9,6 +9,15 @@ namespace IS421Midterm.Client.Events
         public void OnLog(object sender, EventArgs e)
         {
             Console.WriteLine("Enter enter a number.");
-        } 
+
+           
+
+            
+
+        }
+
+
+
+       
     }
 }

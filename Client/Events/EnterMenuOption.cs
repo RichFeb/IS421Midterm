@@ -10,6 +10,11 @@ namespace IS421Midterm.Client.Events
             Console.WriteLine("\t0 - Begin/Continue Calculating");
             Console.WriteLine("\t1 - View History");
             Console.WriteLine("\t2 - Exit");
+           
+
+            
         }
+
+
     }
 }
