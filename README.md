@@ -35,7 +35,7 @@ Each class has a distinct set of use cases and no more than is needed, fulfillin
 3. Observer/Subject Design Patterns
 ![Test Image 1](CalculatorLib/img/Observer.png)
 4. State Design Patterns
-
+![Test Image 1](CalculatorLib/img/State.png)
 5. Iterator Design Patterns
 ![Test Image 1](CalculatorLib/img/Iterator.png)
 
